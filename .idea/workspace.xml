@@ -2,13 +2,9 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="184f59a7-ad6a-49dc-a86e-f3c457f9e065" name="Changes" comment="Se crean las clases principales">
-      <change afterPath="$PROJECT_DIR$/src/main/kotlin/Factoria.kt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/kotlin/Turno.kt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/kotlin/Registro.kt" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/kotlin/Main.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/kotlin/Main.kt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/kotlin/Medico.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/kotlin/Medico.kt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/kotlin/Paciente.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/kotlin/Paciente.kt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/kotlin/SalaEspera.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/kotlin/SalaEspera.kt" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -18,8 +14,9 @@
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
-        <option value="Kotlin Class" />
         <option value="Kotlin Object" />
+        <option value="Kotlin Data Class" />
+        <option value="Kotlin Class" />
       </list>
     </option>
   </component>
