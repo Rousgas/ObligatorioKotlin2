@@ -1,3 +1,3 @@
-class SalaEspera(var numPaciente: Int = 5) {
+class SalaEspera() {
     var pacientes:ArrayList<Paciente> = ArrayList()
 }
