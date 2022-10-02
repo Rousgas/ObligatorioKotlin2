@@ -3,10 +3,9 @@
   <component name="ChangeListManager">
     <list default="true" id="184f59a7-ad6a-49dc-a86e-f3c457f9e065" name="Changes" comment="Se crean las clases principales">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/kotlin/Factoria.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/kotlin/Factoria.kt" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/kotlin/Main.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/kotlin/Main.kt" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/kotlin/Medico.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/kotlin/Medico.kt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/kotlin/Paciente.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/kotlin/Paciente.kt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/kotlin/Registro.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/kotlin/Registro.kt" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/kotlin/SalaEspera.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/kotlin/SalaEspera.kt" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/kotlin/Turno.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/kotlin/Turno.kt" afterDir="false" />
     </list>

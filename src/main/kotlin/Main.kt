@@ -11,19 +11,20 @@ fun main(args: Array<String>) {
     var d = 0
     var sala:Int
     var paciente:Paciente = Paciente()
-    var turno:Turno = Turno()
+    var t:Turno = Factoria.turnoTa()
     var docT:Medico = Factoria.medicoTrauma()
     var docI:Medico = Factoria.medicoInternista()
-    var seAtinede:Boolean
-
 
 
     do {
         nDia = verDia(seg)
         if (nDia != d){
             println("-------------------------- DÍA " + nDia + "-------------------------")
-            d= nDia
+            d = nDia
         }
+
+        reg.dia = nDia
+        reg.turno = t
 
         if (seg%2 == 0){
             sala = masVacia(sala1,sala2,sala3)
@@ -45,7 +46,6 @@ fun main(args: Array<String>) {
 
                 paciente = sala1.llamarPaciente()
                 reg.paciente = paciente
-                reg.dia = nDia
 
                 sala1.simulacion(paciente,reg,docT,docI)
 
@@ -54,7 +54,6 @@ fun main(args: Array<String>) {
 
                 paciente = sala2.llamarPaciente()
                 reg.paciente = paciente
-                reg.dia = nDia
 
                 sala2.simulacion(paciente,reg,docT,docI)
             }
@@ -62,15 +61,25 @@ fun main(args: Array<String>) {
 
                 paciente = sala3.llamarPaciente()
                 reg.paciente = paciente
-                reg.dia = nDia
 
                 sala3.simulacion(paciente,reg,docT,docI)
             }
         }
-        seg++
-    }while (seg <= 80)
-}
+        if(seg%10 == 0){
+            println("************************* CAMBIO DE TURNO*****************************")
+            docT = Factoria.medicoTrauma()
+            docI = Factoria.medicoInternista()
 
+            if (t.turno.equals("Mañana")) t = Factoria.turnoTa()
+            if (t.turno.equals("Tarde")) t = Factoria.turnoNo()
+            if (t.turno.equals("Noche")) t = Factoria.turnoMa()
+        }
+        seg++
+    }while (seg <= 100)
+}
+/*
+Se le pasan las salas de espera, las compara y devuelve la sala que menos pacientes tiene
+ */
 fun masVacia(s1:SalaEspera, s2:SalaEspera,s3:SalaEspera):Int{
     var n1 = s1.pacientes.count()
     var n2 = s2.pacientes.count()
@@ -104,6 +113,9 @@ fun masVacia(s1:SalaEspera, s2:SalaEspera,s3:SalaEspera):Int{
 
     return n
 }
+/*
+Se le pasan las salas de espera, las compara y devuelve la sala que mas pacientes tiene
+ */
 fun masLlena(s1:SalaEspera,s2:SalaEspera,s3:SalaEspera):Int{
     var n1 = s1.pacientes.count()
     var n2 = s2.pacientes.count()
@@ -137,7 +149,9 @@ fun masLlena(s1:SalaEspera,s2:SalaEspera,s3:SalaEspera):Int{
 
     return n
 }
-
+/*
+mira el día que es según el segundo por el que va la simulación
+ */
 fun verDia(s:Int):Int{
     var d = 0
 
