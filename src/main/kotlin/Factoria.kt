@@ -7,6 +7,9 @@ object Factoria {
     fun medicoTrauma() = Medico(crearNIDI(), crearNombre(),"traumatologia", seguro1, crearSeguro2(seguro1))
     fun medicoInternista() = Medico(crearNIDI(), crearNombre(),"internista", seguro1, crearSeguro2(seguro1))
     fun paciente() = Paciente(crearNIDI(), crearNombre(), crearSeguro1(), crearAtencion(), crearPrio())
+    fun turnoMa() = Turno("Mañana",0,0)
+    fun turnoTa() = Turno("Tarde",0,0)
+    fun turnoNo() = Turno("Noche",0,0)
 
     fun crearNIDI():Int{
        var n:Int
