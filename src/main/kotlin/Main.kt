@@ -11,7 +11,7 @@ fun main(args: Array<String>) {
     var d = 0
     var sala:Int
     var paciente:Paciente = Paciente()
-    var t:Turno = Factoria.turnoTa()
+    var t:Turno = Factoria.turnoMa()
     var docT:Medico = Factoria.medicoTrauma()
     var docI:Medico = Factoria.medicoInternista()
 
@@ -70,12 +70,15 @@ fun main(args: Array<String>) {
             docT = Factoria.medicoTrauma()
             docI = Factoria.medicoInternista()
 
+            /*
             if (t.turno.equals("Mañana")) t = Factoria.turnoTa()
             if (t.turno.equals("Tarde")) t = Factoria.turnoNo()
             if (t.turno.equals("Noche")) t = Factoria.turnoMa()
+            */
+            t = t.cambiarTurno(t.turno)
         }
         seg++
-    }while (seg <= 100)
+    }while (seg <= 210)
 }
 /*
 Se le pasan las salas de espera, las compara y devuelve la sala que menos pacientes tiene
@@ -151,17 +154,20 @@ fun masLlena(s1:SalaEspera,s2:SalaEspera,s3:SalaEspera):Int{
 }
 /*
 mira el día que es según el segundo por el que va la simulación
+no se como funcione lo del cambio de día en una galaxia muy lejana, pero
+al tener el cambio de turno cada 10 segundos, he supuesto que el ciclo de un día
+son 30 segundos
  */
 fun verDia(s:Int):Int{
     var d = 0
 
-    if (s <= 86400) d = 1
-    if (s > 86400 && s <= 172800) d = 2
-    if (s > 172800 && s <= 259200) d = 3
-    if (s > 259200 && s <= 345600) d = 4
-    if (s > 345600 && s <= 432000) d = 5
-    if (s > 432000 && s <= 518400) d = 6
-    if (s > 518400 && s <= 604800) d = 7
+    if (s <= 30) d = 1
+    if (s > 30 && s <= 60) d = 2
+    if (s > 60 && s <= 90) d = 3
+    if (s > 90 && s <= 120) d = 4
+    if (s > 120 && s <= 150) d = 5
+    if (s > 150 && s <= 180) d = 6
+    if (s > 180 && s <= 210) d = 7
 
     return d
 }

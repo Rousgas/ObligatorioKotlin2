@@ -3,4 +3,19 @@ class Turno(var turno:String = "", var pacientesAtendidos:Int = 0, var pacientes
         return "Turno(turno='$turno', pacientesAtendidos=$pacientesAtendidos, pacientesDerivados=$pacientesDerivados)"
     }
 
+    fun cambiarTurno(tu:String):Turno{
+        var tCambiado:Turno = Turno()
+
+        if (tu.equals("Mañana")){
+            tCambiado = Factoria.turnoTa()
+        }
+        if (tu.equals("Tarde")){
+            tCambiado = Factoria.turnoNo()
+        }
+        if (tu.equals("Noche")){
+            tCambiado = Factoria.turnoMa()
+        }
+
+        return tCambiado
+    }
 }

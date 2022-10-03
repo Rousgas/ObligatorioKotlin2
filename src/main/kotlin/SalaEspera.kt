@@ -37,7 +37,15 @@ class SalaEspera() {
             println(p)
             println(r.turno)
             println("Atendido el día " + r.dia)
-            println("//////////////////////////////////")
+            println("///////////////////////////////////////////////////////////////////")
+
+            //Borramos el paciente de la sala de espera, se deriva a otra nave hospital porque no hay medicos especializados en quemaduras laser
+            this.pacientes.forEach(){pac ->
+                if (pac == p){
+                    pac.prioridad = 0
+                }
+            }
+            this.pacientes.removeIf{it.prioridad == 0}
         }else{
             if (p.atencion.equals(("impacto chorritronico"))){
                 r.medico = dT
